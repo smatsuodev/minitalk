@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.h                                           :+:      :+:    :+:   */
+/*   ptr.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smatsuo <smatsuo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: smatsuo <smatsuo@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 23:58:23 by smatsuo           #+#    #+#             */
-/*   Updated: 2023/06/20 11:36:28 by smatsuo          ###   ########.fr       */
+/*   Created: 2023/06/07 17:43:15 by smatsuo           #+#    #+#             */
+/*   Updated: 2023/06/07 20:04:02 by smatsuo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLIENT_H
-# define CLIENT_H
+#include "internal.h"
 
-# include "minitalk.h"
+void	parse_ptr_conv(t_output *output)
+{
+	void	*arg;
 
-#endif
+	output->conv_type = C_PTR;
+	arg = va_arg(*output->args, void *);
+	parse_ull_to_buf(output, (unsigned long long)arg, 16);
+}

@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.h                                           :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smatsuo <smatsuo@student.42.fr>            +#+  +:+       +#+        */
+/*   By: smatsuo <smatsuo@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 23:58:23 by smatsuo           #+#    #+#             */
-/*   Updated: 2023/06/20 11:36:28 by smatsuo          ###   ########.fr       */
+/*   Created: 2023/06/19 22:56:11 by smatsuo           #+#    #+#             */
+/*   Updated: 2023/06/20 22:10:12 by smatsuo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLIENT_H
-# define CLIENT_H
+#ifndef MINITALK_H
+# define MINITALK_H
 
-# include "minitalk.h"
+# include <unistd.h>
+# include <signal.h>
+# include <stdlib.h>
+# include "ft_printf.h"
 
 #endif

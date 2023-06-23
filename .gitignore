@@ -1,3 +1,7 @@
-client
-server
+client*
+server*
 !src/**/*
+.DS_Store
+*.o
+*.a
+*.json

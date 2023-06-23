@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.h                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smatsuo <smatsuo@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/18 23:58:23 by smatsuo           #+#    #+#             */
-/*   Updated: 2023/06/20 11:36:28 by smatsuo          ###   ########.fr       */
+/*   Created: 2023/05/16 17:11:04 by smatsuo           #+#    #+#             */
+/*   Updated: 2023/05/18 16:54:44 by smatsuo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLIENT_H
-# define CLIENT_H
+#include "libft.h"
 
-# include "minitalk.h"
+char	*ft_strchr(const char *s, int c)
+{
+	char	target;
 
-#endif
+	target = c;
+	while (*s == target || *s != '\0')
+	{
+		if (*s == target)
+			return ((char *)s);
+		++s;
+	}
+	return (NULL);
+}
